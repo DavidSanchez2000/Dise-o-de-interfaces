@@ -1,7 +1,7 @@
 function shoppingCar(typePaella){ 
     this.typePaella = typePaella;
     var arrayElements = [];
-
+/*
     this.compositeProto = function()
     {
         var objetComposite = {
@@ -22,14 +22,41 @@ function shoppingCar(typePaella){
 
         } 
         return objetComposite;
-    }
+    }*/
 }
 
-function buildShoppingCar(typeProduct, product){//tipo de producto, producto){
+shoppingCar.prototype = {
+     add: function(product){
+        console.log(arrayElements);
+        arrayElements.push(product);
 
+        },
+
+        remove: function (product){
+
+            arrayElements.split(0, this.arrayElements.length);
+            arrayElements.add(product);
+            return arrayElements;
+     
+        }
+    
+}
+
+
+function buildShoppingCar(typeProduct, product){//tipo de producto, producto){
+/*
     var car = new shoppingCar(typeProduct);
     var resultCar = car.compositeProto().add(product);
 
-    return resultCar;
+    return resultCar;*/
+
+    var car = new shoppingCar(typeProduct);
+
+    for(var i =0;i <= product.length; i++){
+
+        car.add(product[i])
+    }
+
+    return car;
 }
 

@@ -17,11 +17,9 @@ function getValuePrice (paellaPrice){
 
 }
 
-
-
-
 //var micarrito ={typeProduct:this.paellaType, product:this.paellaProduct};
 var product = [];
+let menuItems = ["mariscos","vegetariana","carne y pollo"]
 
 function buildPaella(){
 
@@ -44,7 +42,7 @@ function buildPaella(){
 
 	
 		console.log("Valor en dolar",newCalculateDolar(paellaPrice));
-	r
+
 		console.log("iva en dolares",calculatePaellaPrice(paellaPrice));
 
 	}
@@ -56,15 +54,11 @@ function buildPaella(){
 		console.log("iva en euros",calculatePaellaPriceEuro(paellaPrice));
 	}
 
-	/*var micarrito = new buildShoppingCar(factory.type,paellaProduct);
-	console.log(micarrito);*/
-	
-	for(var i = 0; i < product.length ; i++){
-		
+	var micarrito = new buildShoppingCar(this.paellaType.value,paellaProduct);
+	console.log(micarrito);
 
-	}
+
+	///Decorator
+	var Decorator = new executeDecorator(menuItems);
+	console.log(Decorator);
 }
-
-
-
-//<input type = "text" class = " form-control" placeholder = "peso, dolar, euro" oncahnge = "getvalueCoin(this)">
